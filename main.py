@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageOps
 from model import Model
 
 model = Model()
-model_path = Path(__file__).resolve().parent / "saved_models" / "mnist_model.pth"
+model_path = Path(__file__).resolve().parent / "mnist_model.pth"
 model.load_state_dict(torch.load(model_path, map_location="cpu", weights_only=True))
 model.eval()
 root = tk.Tk()
